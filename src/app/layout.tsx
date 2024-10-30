@@ -34,17 +34,25 @@ const RootLayout = ({
               "flex flex-col items-center min-h-dvh w-full h-max relative"
             }
           >
-            <Header />
-
             <div className={"flex flex-grow w-full"}>
               <div
                 className={
-                  "grid-cols-[1.2fr_6fr] w-full h-full xl:grid-cols-[1.1fr_6fr]"
+                  "grid grid-cols-[1.5fr_6fr] xl:grid-cols-[1.7fr_6fr] w-full"
                 }
               >
                 <Sidebar />
 
-                <main className={"w-full h-full"}>{children}</main>
+                <div className={"w-full h-full"}>
+                  <div
+                    className={
+                      "flex flex-col items-center gap-6 w-full h-full sm:gap-7 md:gap-9 lg:gap-11 xl:gap-[51px]"
+                    }
+                  >
+                    <Header />
+
+                    <main className={"w-full h-full"}>{children}</main>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

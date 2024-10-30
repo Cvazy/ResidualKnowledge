@@ -43,3 +43,7 @@ button {
 input, textarea {
   outline: none;
 }
+
+img {
+  @apply select-none
+}
