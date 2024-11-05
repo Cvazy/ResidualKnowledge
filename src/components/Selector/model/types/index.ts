@@ -13,3 +13,8 @@ export interface ISelectorProps {
   selectorsItems: ISelectorItem[];
   activeItem: ISelectorItem;
 }
+
+export interface IFaculty {
+  id: number | string;
+  name: string;
+}

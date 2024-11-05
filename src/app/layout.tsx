@@ -50,7 +50,19 @@ const RootLayout = ({
                   >
                     <Header />
 
-                    <main className={"w-full h-full"}>{children}</main>
+                    <main className={"w-full h-full"}>
+                      <div className={"bg-white w-full h-full"}>
+                        <div
+                          className={
+                            "flex justify-center w-full h-full px-5 py-10 md:py-[51px]"
+                          }
+                        >
+                          <div className={"max-w-[1144px] w-full"}>
+                            {children}
+                          </div>
+                        </div>
+                      </div>
+                    </main>
                   </div>
                 </div>
               </div>
