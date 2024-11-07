@@ -10,6 +10,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: COLORS,
+      borderRadius: {
+        "20": "20px",
+      },
     },
   },
   plugins: [],
