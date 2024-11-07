@@ -11,4 +11,10 @@ export interface IParticipatingGroups {
   discipline: string;
   paperReport: ReportEnum;
   electronicReport: ReportEnum;
+  detailsInfo: IDetailsInfo[];
+}
+
+export interface IDetailsInfo {
+  title: string;
+  value: string;
 }
