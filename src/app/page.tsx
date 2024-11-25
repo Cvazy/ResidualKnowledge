@@ -11,6 +11,8 @@ import { useSearchParams } from "next/navigation";
 import { FacultyInfo } from "@/app/FacultyInfo";
 import { Suspense } from "react";
 
+export const dynamic = "force-dynamic";
+
 const MainPage = () => {
   const searchParams = useSearchParams();
   const faculty = searchParams.get("faculty");
