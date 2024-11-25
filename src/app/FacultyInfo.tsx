@@ -17,6 +17,7 @@ export const FacultyInfo: FC<IFacultyInfoProps> = ({ facultyId }) => {
     return <div>Faculty not found</div>;
   }
   const { name } = faculty;
+
   return (
     <div className={"flex flex-col items-center gap-1.5 w-full"}>
       <div className={"flex flex-col items-start gap-5 w-full"}>
