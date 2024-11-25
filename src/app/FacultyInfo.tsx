@@ -10,10 +10,13 @@ interface IFacultyInfoProps {
 }
 
 export const FacultyInfo: FC<IFacultyInfoProps> = ({ facultyId }) => {
-  const { name } = facultiesList.find(
+  const faculty = facultiesList.find(
     ({ id }) => id.toString() === facultyId.toString(),
   );
-
+  if (!faculty) {
+    return <div>Faculty not found</div>;
+  }
+  const { name } = faculty;
   return (
     <div className={"flex flex-col items-center gap-1.5 w-full"}>
       <div className={"flex flex-col items-start gap-5 w-full"}>
