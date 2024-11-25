@@ -6,3 +6,4 @@ export * from "./Selector";
 export * from "./ReportsInfoList";
 export * from "./ParticipatingGroups";
 export * from "./Modal";
+export * from "./FacultyInfoWrapper";
