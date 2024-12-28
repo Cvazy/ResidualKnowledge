@@ -5,4 +5,5 @@ export const COLORS = {
   main_gray: "#515151",
   medium_gray: "#AAAAAA",
   light_gray: "#D9D9D9",
+  extra_light_gray: "#EEEEEE",
 };
