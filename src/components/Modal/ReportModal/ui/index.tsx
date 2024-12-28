@@ -25,6 +25,7 @@ export const ReportModal: FC<IReportModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           <Button
+            isActive={true}
             paddings={"py-2.5 px-8"}
             borderRadius={"rounded-lg"}
             textStyle={"text-base"}

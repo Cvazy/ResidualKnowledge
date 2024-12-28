@@ -11,7 +11,12 @@ export const ReportsInfoList = () => {
   return (
     <div className={"flex gap-5 justify-center flex-wrap w-full"}>
       {reportsCategories.map((item) => (
-        <div key={item} className={"max-w-[174px] grow bg-main_gray w-full"}>
+        <div
+          key={item}
+          className={
+            "max-w-[174px] grow bg-medium_purple rounded-[10px] w-full"
+          }
+        >
           <div
             className={
               "flex flex-col items-center justify-between gap-1.5 py-3 px-8 w-full h-full"

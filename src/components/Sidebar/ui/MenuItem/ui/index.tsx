@@ -11,9 +11,17 @@ export const MenuItem: FC<IMenuItem> = ({ link, name }) => {
   return (
     <Link
       href={link}
-      className={`block text-black text-lg py-3 px-5 text-center min-h-[50px] w-full ${pathname === link ? "bg-dark_gray" : "bg-medium_gray"}`}
+      className={`flex items-center gap-[16px] flex-nowrap text-black ${pathname !== link ? "pl-[31px]" : ""} min-h-[29px] w-full`}
     >
-      {name}
+      <div
+        className={`${pathname === link ? "block" : "hidden"} bg-main_purple min-w-[15px] max-w-[15px] min-h-[15px] max-h-[15px] rounded-full`}
+      ></div>
+
+      <p
+        className={`text-2xl text-left font-bold ${pathname === link ? "text-main_purple" : "text-main_gray"}`}
+      >
+        {name}
+      </p>
     </Link>
   );
 };

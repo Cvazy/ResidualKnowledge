@@ -20,7 +20,7 @@ export const ParticipatingGroups: FC<IParticipatingGroupsProps> = ({
   return (
     <div className={"flex flex-col w-full"}>
       <div
-        className={`bg-main_gray ${isFirstElementOpen ? "rounded-t-xl" : "rounded-xl"} w-full`}
+        className={`bg-light_purple ${isFirstElementOpen ? "rounded-t-xl" : "rounded-xl"} w-full`}
       >
         <div
           className={
@@ -83,6 +83,7 @@ export const ParticipatingGroups: FC<IParticipatingGroupsProps> = ({
             electronicReport={electronicReport}
             paperReport={paperReport}
             detailsInfo={detailsInfo}
+            isLastItem={index === foundGroups.length - 1}
           />
         ),
       )}

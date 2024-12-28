@@ -10,20 +10,22 @@ export const FacultyInfoWrapper = () => {
 
   return (
     <>
-      {faculty ? (
-        <FacultyInfo facultyId={faculty} />
-      ) : (
-        <div className={"grid grid-cols-2 gap-5 w-fit lg:grid-cols-3"}>
-          {facultiesList.map(({ id, name, description }) => (
-            <FacultyCard
-              key={id}
-              name={name}
-              description={description}
-              id={id}
-            />
-          ))}
-        </div>
-      )}
+      <div className={"flex justify-center items-center w-full"}>
+        {facultiesList.map(({ id, name, description, short_name }, index) => (
+          <FacultyCard
+            isLast={index === facultiesList.length - 1}
+            key={id}
+            name={name}
+            description={description}
+            short_name={short_name}
+            id={id}
+            index={index}
+            isActive={id == faculty}
+          />
+        ))}
+      </div>
+
+      {faculty && <FacultyInfo facultyId={faculty} />}
     </>
   );
 };
