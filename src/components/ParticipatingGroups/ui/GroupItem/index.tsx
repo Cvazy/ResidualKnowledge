@@ -9,6 +9,7 @@ import { Button, ReportModal } from "@/components";
 
 interface IGroupItemProps extends Omit<IParticipatingGroups, "facultyId"> {
   index: number;
+  isLastItem: boolean;
   setFirstStatus: (value: ((prevState: boolean) => boolean) | boolean) => void;
 }
 
@@ -20,6 +21,7 @@ export const GroupItem: FC<IGroupItemProps> = ({
   paperReport,
   electronicReport,
   detailsInfo,
+  isLastItem,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -36,7 +38,9 @@ export const GroupItem: FC<IGroupItemProps> = ({
     <>
       <ReportModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      <div className={`${isOpen ? "bg-light_gray" : "bg-white"} h-full w-full`}>
+      <div
+        className={`bg-white h-full w-full border-medium_purple ${isLastItem ? "border-none" : "border-b"}`}
+      >
         <div className={"w-full relative"}>
           <div
             onClick={handleClick}
@@ -142,6 +146,7 @@ export const GroupItem: FC<IGroupItemProps> = ({
             {paperReport === ReportEnum["Требует проверки"] && (
               <div className={"flex items-center justify-start gap-6 w-full"}>
                 <Button
+                  isActive={true}
                   type={"button"}
                   paddings={"px-6 py-2"}
                   borderRadius={"rounded-20"}
@@ -151,6 +156,7 @@ export const GroupItem: FC<IGroupItemProps> = ({
                 </Button>
 
                 <Button
+                  isActive={true}
                   type={"button"}
                   paddings={"px-6 py-2"}
                   borderRadius={"rounded-20"}
@@ -174,7 +180,7 @@ export const GroupItem: FC<IGroupItemProps> = ({
             >
               <path
                 d="M13.1169 15.7788C12.3182 16.8761 10.6818 16.8761 9.88306 15.7788L1.25542 3.92707C0.293173 2.60523 1.23738 0.75 2.87236 0.75L20.1276 0.75C21.7626 0.75 22.7068 2.60523 21.7446 3.92707L13.1169 15.7788Z"
-                fill={`${isOpen ? "white" : "#D9D9D9"}`}
+                fill={`#D9D9D9`}
               />
             </svg>
           </div>

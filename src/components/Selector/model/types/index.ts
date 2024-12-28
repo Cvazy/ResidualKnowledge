@@ -9,7 +9,6 @@ export interface ISelectorItem {
 }
 
 export interface ISelectorProps {
-  theme: Theme;
   selectorsItems: ISelectorItem[];
   activeItem: ISelectorItem;
 }

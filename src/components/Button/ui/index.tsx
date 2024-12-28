@@ -23,7 +23,7 @@ export const Button: FC<IButtonProps> = ({
     <button
       onClick={onClick}
       type={type ? type : "button"}
-      className={`${paddings} ${borderRadius} ${textStyle ? textStyle : "text-xl"} ${isActive ? "bg-dark_gray" : "bg-main_gray"} text-center text-black hover:bg-dark_gray`}
+      className={`${paddings} ${borderRadius} ${textStyle ? textStyle : "text-xl"} ${isActive ? "bg-medium_purple" : "bg-light_purple"} text-center text-black hover:bg-main_purple`}
     >
       {children}
     </button>
