@@ -5,6 +5,7 @@ import {
   FacultyCard,
   Selector,
   selectorItems,
+  Statistics,
 } from "@/components";
 import { Suspense } from "react";
 import { FacultyInfo } from "@/app/FacultyInfo";
@@ -16,7 +17,7 @@ const MainPage = () => {
 
   return (
     <div className={"flex flex-col items-center gap-[22px]"}>
-      <div className={"flex flex-col items-center gap-7"}>
+      <div className={"flex flex-col items-center gap-7 w-full"}>
         <div className={"flex justify-center items-center w-full"}>
           {facultiesList.map(({ id, name, description, short_name }, index) => (
             <FacultyCard
@@ -41,9 +42,13 @@ const MainPage = () => {
           Сейчас идет этап сдачи электронных отчетов (до 15.07.24)
         </p>
 
-        <Suspense fallback={<div>Loading...</div>}>
-          {faculty && <FacultyInfo facultyId={faculty} />}
-        </Suspense>
+        {faculty ? (
+          <Suspense fallback={<div>Loading...</div>}>
+            {faculty && <FacultyInfo facultyId={faculty} />}
+          </Suspense>
+        ) : (
+          <Statistics />
+        )}
       </div>
     </div>
   );

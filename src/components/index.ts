@@ -9,3 +9,4 @@ export * from "./Modal";
 export * from "./FacultyInfoWrapper";
 export * from "./Input";
 export * from "./NewOrderStep";
+export * from "./Statistics";
